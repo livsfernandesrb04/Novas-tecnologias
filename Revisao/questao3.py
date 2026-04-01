@@ -41,16 +41,25 @@ class Usuario:
             # Caso contrário, exiba uma mensagem de erro ("E-mail inválido").
             print("E-mail inválido")
 
-
     email = property(get_email, set_email)
 
 #Crie uma classe GerenciadorUsuarios que contenha uma lista (inicialmente vazia) para armazenar objetos do tipo Usuario. 
 
 class GerenciadorUsuario:
-    usuario = []
+    def __init__(self):
+        self.usuarios = []
+
     # Ela deve ter os métodos adicionar_usuario(usuario), remover_usuario_por_id(id) e listar_usuarios().
-    def adicionar_usuario(usuario)
+    def adicionar_usuario(self, usuario):
+        self.usuarios.append(usuario)
+
     
-    def remover_usuario_por_id(id)
+    def remover_usuario_por_id(self, id):
+        for user in self.usuarios:
+            if user.id == id:
+                self.usuarios.remove(user)
+
     
-    def listar_usuario()
+    def listar_usuario(self):
+        for user in self.usuarios:
+            print(f"{user.nome}, {user.id}, {user.email}")
