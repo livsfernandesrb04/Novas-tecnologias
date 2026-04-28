@@ -1,4 +1,4 @@
-#manipulação de imagem em escala de cinza
+#manipulacao de imagem em escala de cinza
 import numpy as np
 
 imagem = np.array([
@@ -8,15 +8,16 @@ imagem = np.array([
     [ 30,  20,  10,   5,   2,   0]
 ], dtype=np.uint8)
 
-#Calcular o brilho médio geral
+#Calcular o brilho medio geral
 brilho_medio = round(np.mean(imagem), 2)
 print(f"Brilho medio geral: {brilho_medio}")
 
-#Calcular o brilho médio por linha
+#Calcular o brilho medio por linha
 brilho_medio_por_linha = np.mean(imagem, axis=1)
+np.round(brilho_medio_por_linha)
 print(f"Brilho medio por linha: {brilho_medio_por_linha}")
 
-#Calcular o brilho médio por coluna
+#Calcular o brilho medio por coluna
 brilho_medio_por_coluna = np.mean(imagem, axis=0)
 print(f"Brilho medio por coluna: {brilho_medio_por_coluna}")
 
@@ -24,11 +25,11 @@ print(f"Brilho medio por coluna: {brilho_medio_por_coluna}")
 linha_escura = np.min(imagem, axis=0 )
 indice = np.where(np.all(imagem == linha_escura, axis=1))[0]
 
-#Qual linha é mais escura (menor média)?
-print(f"Linha mais escura: {indice + 1}ª linha = {linha_escura}")
+#Qual linha � mais escura (menor m�dia)?
+print(f"Linha mais escura: linha {indice + 1} = {linha_escura}")
 
-#Usar indexação booleana para criar uma versão binária da imagem
-#ALteração condicional
+#Usar indexa��o booleana para criar uma vers�o bin�ria da imagem
+#Altera��o condicional
 imagem[imagem > 127] = 255
 imagem[imagem < 126] = 0
 print(imagem)
