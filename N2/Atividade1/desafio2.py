@@ -34,6 +34,3 @@ print(f"Linha mais escura: linha {indice + 1} = {linha_escura}")
 imagem[imagem > 127] = 255
 imagem[imagem < 126] = 0
 print(imagem)
-
-
-

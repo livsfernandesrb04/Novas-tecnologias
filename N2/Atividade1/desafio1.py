@@ -31,4 +31,3 @@ print(f"Notas normalizadas: {notas_normalizadas}")
 # usar indexação booleana
 # filtragem
 print(f"Notas dos aluno com media >= 6: {notas[media_por_aluno >= 6]}")
-
