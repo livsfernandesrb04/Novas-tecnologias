@@ -7,3 +7,9 @@ df_novo = df.assign(
 #rename the dataframe
 #chave == antigo value == novoNome
 
+#aprendizado de maquina
+#tarefa de classificação
+from sklearn.preprocessing import StandardScaler
+import numpy as np
+
+dados
